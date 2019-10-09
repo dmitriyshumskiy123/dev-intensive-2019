@@ -3,7 +3,6 @@ package ru.skillbranch.devintensive.Extensions
 import java.lang.IllegalStateException
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.time.days
 
 const val SECOND = 1000L
 const val MINUTE = 60 * SECOND
