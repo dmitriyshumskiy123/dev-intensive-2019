@@ -20,3 +20,10 @@ fun String.truncate(str: String, num: Int = 16) : String
         return str1
     }
 }
+
+fun String.stripHtml(str: String) : String
+{
+    val pattern = "[^& < > ' \"]".toRegex()
+    var str1 = (pattern.split(str).filter { it.isNotBlank() }).toString().replace("  ", " ")
+    return str1
+}
