@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         benderObj = Bender(Bender.Status.valueOf(status), Bender.Question.valueOf(question))
 
         Log.d("M_MainActivity", "onCreate $status $question")
-        
+
         val (r,g,b) = benderObj.status.color
         //добавление эффекта наложения
         benderImage.setColorFilter(Color.rgb(r,g,b), PorterDuff.Mode.MULTIPLY)
@@ -118,4 +118,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             textTxt.text = phrase
         }
     }
+    /*fun onIvSendClicked(){
+        val (phrase, color) = benderObj.listenAnswer(messageEt.text.toString().toLowerCase())
+        messageEt.setText("")
+        val (r,g,b) = color
+        //добавление эффекта наложения
+        benderImage.setColorFilter(Color.rgb(r,g,b), PorterDuff.Mode.MULTIPLY)
+        //выведение нашего сообщения в textTxt
+        textTxt.text = phrase
+    }*/
 }
